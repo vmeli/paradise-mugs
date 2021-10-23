@@ -115,14 +115,14 @@
     <div class="collectipn_section_3 layuot_padding">
     	<div class="container">
     		<div class="racing_shoes">
-    			<div class="row">
+    			<div class="row" style="align-items: center">
 					<div class="col-md-8">
 						<div class="shoes-img3"><img src="images/taza-repartidor.png"></div>
 					</div>
     				<div class="col-md-4">
-    					<div class="sale_text"><strong>Sale <br><span style="color: #0a0506;">JOGING</span> <br>SHOES</strong></div>
-    					<div class="number_text"><strong>$ <span style="color: #0a0506">100</span></strong></div>
-    					<button class="seemore">See More</button>
+    					<div class="sale_text"><strong>Auto <br><span style="color: #0a0506;">Speed</span> <br>King</strong></div>
+    					<div class="number_text"><strong><span style="color: #0a0506">Repair</span></strong></div>
+    					<!-- <button class="seemore">See More</button> -->
     				</div>
     			</div>
     		</div>
@@ -276,39 +276,26 @@
     	</div>
     	<div class="container-fluid ram">
     		<div class="row">
-    			<div class="col-md-6">
-    				<div class="email_box">
-                    <div class="input_main">
-                       <div class="container">
-                          <form action="/action_page.php">
-                            <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="Name" name="Name">
-                            </div>
-                            <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="Phone Numbar" name="Name">
-                            </div>
-                            <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="Email" name="Email">
-                            </div>
-                            
-                            <div class="form-group">
-                                <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
-                            </div>
-                          </form>   
-                       </div> 
-                       <div class="send_btn">
-                        <button class="main_bt">Send</button>
-                       </div>                   
-                    </div>
-    		</div>
-    			</div>
-    			<div class="col-md-6">
-    				<div class="shop_banner">
-    					<div class="our_shop">
-    						<button class="out_shop_bt">Our Shop</button>
-    					</div>
-    				</div>
-    			</div>
+				<div class="col-md-12">
+					<div class="carousel-marcas">
+						<div><img style="margin: auto" src="images/marcas/casinelli-logo.png"></div>
+						<div><img style="margin: auto" src="images/marcas/d-gallia-logo.png"></div>
+						<div><img style="margin: auto" src="images/marcas/esan-logo.png"></div>
+						<div><img style="margin: auto" src="images/marcas/interfondos-logo.png"></div>
+						<div><img style="margin: auto" src="images/marcas/inti-logo.png"></div>
+						<div><img style="margin: auto" src="images/marcas/istore-logo.png"></div>
+						<div><img style="margin: auto" src="images/marcas/megaplaza-logo.png"></div>
+						<div><img style="margin: auto" src="images/marcas/prisma-logo.png"></div>
+						<div><img style="margin: auto" src="images/marcas/casinelli-logo.png"></div>
+						<div><img style="margin: auto" src="images/marcas/d-gallia-logo.png"></div>
+						<div><img style="margin: auto" src="images/marcas/esan-logo.png"></div>
+						<div><img style="margin: auto" src="images/marcas/interfondos-logo.png"></div>
+						<div><img style="margin: auto" src="images/marcas/inti-logo.png"></div>
+						<div><img style="margin: auto" src="images/marcas/istore-logo.png"></div>
+						<div><img style="margin: auto" src="images/marcas/megaplaza-logo.png"></div>
+						<div><img style="margin: auto" src="images/marcas/prisma-logo.png"></div>
+					</div>
+				</div>
     		</div>
     	</div>
     </div>
@@ -401,48 +388,16 @@
       <!-- javascript --> 
       <script src="js/owl.carousel.js"></script>
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+	
+	  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+	  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
       <script>
-
-		 var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-			(function () {
-				var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-				s1.async = true;
-				s1.src = 'https://embed.tawk.to/61735c0986aee40a5737f227/1fil9v1qo';
-				s1.charset = 'UTF-8';
-				s1.setAttribute('crossorigin', '*');
-				s0.parentNode.insertBefore(s1, s0);
-			})();
-
-         $(document).ready(function(){
-         $(".fancybox").fancybox({
-         openEffect: "none",
-         closeEffect: "none"
-         });
-         
-         
-$('#myCarousel').carousel({
-            interval: false
-        });
-
-        //scroll slides on swipe for touch enabled devices
-
-        $("#myCarousel").on("touchstart", function(event){
-
-            var yClick = event.originalEvent.touches[0].pageY;
-            $(this).one("touchmove", function(event){
-
-                var yMove = event.originalEvent.touches[0].pageY;
-                if( Math.floor(yClick - yMove) > 1 ){
-                    $(".carousel").carousel('next');
-                }
-                else if( Math.floor(yClick - yMove) < -1 ){
-                    $(".carousel").carousel('prev');
-                }
-            });
-            $(".carousel").on("touchend", function(){
-                $(this).off("touchmove");
-            });
-        });
+		  $('.carousel-marcas').slick({
+				arrows: false,
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				autoplay: true
+			});
       </script> 
    </body>
 </html>
